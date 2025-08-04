@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Berserk Chatroom</title>
+  <title>Berserk</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -14,11 +14,7 @@
 
     body {
       font-family: 'Georgia', serif;
-      background-color: #0e0e0e;
-      background-image: url('https://i.ibb.co/wzVKQjY/brand-overlay.png'); /* Brand of Sacrifice overlay (low opacity) */
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 300px;
+      background: #1c1c1c;
       color: #f5f0e1;
     }
 
@@ -26,63 +22,55 @@
       position: fixed;
       top: 0;
       bottom: 0;
-      width: 160px;
-      background: radial-gradient(#111 20%, #000 100%);
+      width: 150px;
+      background: linear-gradient(to bottom, #111, #2b2b2b, #111);
       z-index: 0;
     }
 
-    .side-strip.left {
-      left: 0;
-    }
-
-    .side-strip.right {
-      right: 0;
-    }
+    .side-strip.left { left: 0; }
+    .side-strip.right { right: 0; }
 
     .content-wrapper {
       position: relative;
       z-index: 2;
-      max-width: 920px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
     .banner-top {
       width: 100%;
-      height: 240px;
-      background-image: url('https://i.ibb.co/bHjXYvZ/berserk-banner-dark.jpg');
+      height: 220px;
+      background-image: url('banner.jpg'); /* Pulls same banner from repo */
       background-size: cover;
       background-position: center;
-      border-bottom: 5px solid crimson;
-      box-shadow: 0 0 15px #000;
+      border-bottom: 4px solid crimson;
     }
 
     .container {
-      background: #1a1a1a;
+      background: #2b2b2b;
       padding: 40px 30px;
       border-radius: 0 0 8px 8px;
       margin-top: -20px;
       text-align: center;
-      box-shadow: inset 0 0 10px #000;
     }
 
     h1 {
       font-family: 'Cinzel', serif;
-      font-size: 44px;
-      margin-bottom: 14px;
+      font-size: 42px;
+      margin-bottom: 12px;
       color: crimson;
-      text-shadow: 2px 2px 5px black;
     }
 
     .mark-symbol {
-      font-size: 38px;
+      font-size: 36px;
       color: #b5a078;
-      margin-left: 10px;
+      margin-left: 12px;
     }
 
     p {
       font-size: 18px;
-      color: #ddd;
+      color: #e0d8cd;
     }
 
     a {
@@ -99,37 +87,13 @@
     }
 
     @media (max-width: 600px) {
-      .side-strip {
-        display: none;
-      }
-
-      .banner-top {
-        height: 140px;
-      }
-
-      h1 {
-        font-size: 30px;
-      }
-
-      .mark-symbol {
-        font-size: 24px;
-      }
-
-      .container {
-        padding: 20px 16px;
-      }
-
-      #disqus_thread {
-        margin-top: 20px;
-        font-size: 14px;
-      }
-
-      #disqus_thread img,
-      #disqus_thread video,
-      #disqus_thread iframe {
-        max-width: 100%;
-        height: auto;
-      }
+      .side-strip { display: none; }
+      .content-wrapper { padding: 0 12px; }
+      .banner-top { height: 120px; border-bottom: 2px solid crimson; }
+      .container { padding: 20px 16px; border-radius: 0; }
+      h1 { font-size: 28px; }
+      .mark-symbol { font-size: 22px; }
+      p { font-size: 16px; }
     }
   </style>
 </head>
@@ -139,10 +103,9 @@
 
   <div class="content-wrapper">
     <div class="banner-top"></div>
-
     <div class="container">
       <h1>Berserk <span class="mark-symbol">𒉭</span></h1>
-      <p>Speak your mind. This is the Black Swordsman's realm.</p>
+      <p>Speak your mind in the Black Swordsman's realm.</p>
     </div>
 
     <div id="disqus_thread"></div>
@@ -154,7 +117,7 @@
 
       (function () {
         var d = document, s = d.createElement('script');
-        s.src = 'https://berserk-14.disqus.com/embed.js';
+        s.src = 'https://berserk-14.disqus.com/embed.js'; // Use your actual Disqus shortname
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
       })();

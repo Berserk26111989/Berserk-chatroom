@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berserk Chat Threads</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #ddd;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      background: #1a1a1a;
+      border-bottom: 3px solid crimson;
+    }
+
+    header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      color: crimson;
+      text-shadow: 2px 2px 4px black;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .chatroom-card {
+      background-color: #1a1a1a;
+      border: 1px solid crimson;
+      border-radius: 10px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .chatroom-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px crimson;
+    }
+
+    .chatroom-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .chatroom-info {
+      padding: 1rem;
+    }
+
+    .chatroom-info h2 {
+      margin: 0 0 0.5rem;
+      color: crimson;
+    }
+
+    .chatroom-info p {
+      margin: 0;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Berserk Chatrooms</h1>
+  </header>
+
+  <main>
+    <a href="chatroom.html?room=berserk" class="chatroom-card">
+      <img src="https://i.ibb.co/bHjXYvZ/berserk-banner-dark.jpg" alt="Berserk Chatroom">
+      <div class="chatroom-info">
+        <h2>Black Swordsman</h2>
+        <p>Talk about Guts, his journey, and his rage</p>
+      </div>
+    </a>
+
+    <a href="chatroom.html?room=falconia" class="chatroom-card">
+      <img src="https://i.ibb.co/SfjLPDN/falconia-banner.jpg" alt="Falconia Chatroom">
+      <div class="chatroom-info">
+        <h2>Falconia</h2>
+        <p>The age of light... or control?</p>
+      </div>
+    </a>
+  </main>
+</body>
+</html>
+
